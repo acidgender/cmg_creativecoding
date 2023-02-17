@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Video World</title>
+    <meta name="Video World" content="Video World • A-Frame">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+   
+      
+  </head>
+  <body>
+
+
+    <a-scene renderer="antialias:false; colorManagement: true; exposure: 0.1;" fog="type: linear; color: #f7c78d; near: 20; far: 40" light="defaultLightsEnabled: false" shadow="enabled: false; type: basic;">
+      <a-assets>
+        <a-asset-item id="building" src="assets/videoworld.glb"></a-asset-item>
+        <img id="tv1" src="assets/ripley.gif">
+        <img id="tv2" src="assets/fabelmans.gif">
+        <img id="tv3" src="assets/hausu.gif">
+      </a-assets>
+
+      <a-scene stats></a-scene>
+
+      <a-sky color="#ebb223"></a-sky>
+      <a-entity light="type: ambient; color: #ffffff; intensity: 0.5;"></a-entity>
+
+      <a-entity light="type: point; color: #dff595; intensity: 0.2; castShadow:true;" position="7.4 2.4 1.5" ></a-entity>
+      <a-entity light="type: point; color: #dff595; intensity: 0.2; castShadow:true;" position="-0.2 2.4 1.5"></a-entity>
+      <a-entity light="type: point; color: #dff595; intensity: 0.2; castShadow:true;" position="-7.4 2.4 1.5"></a-entity>
+      <a-entity light="type: point; color: #dff595; intensity: 0.2; castShadow:true;" position="-7.3 3 -13"></a-entity>
+
+
+      <a-entity id="rig" position="0 1.6 25">
+        <a-entity camera look-controls wasd-controls="fly: false; speed: 0.2"></a-entity>
+      </a-entity>
+
+      <a-entity gltf-model="#building" scale="0.5 0.5 0.5" rotation="0 90 0" shadow="receive: true"></a-entity>
+
+      <a-plane  scale="2.170 1.220 1" position="2.83, 2.55, -8.78" material="shader:gif; src:#tv1;"></a-plane>
+      <a-plane  scale="2.170 1.220 1" position="-7.24, 3.05, -15.82" material="shader:gif; src:#tv2;"></a-plane>
+      <a-plane  scale="2.170 1.220 1" position="-11.93, 3.05, -11.69" rotation="0 90 0" material="shader:gif; src:#tv3;"></a-plane>
+
+    </a-scene>
+
+</body>
+</html>
