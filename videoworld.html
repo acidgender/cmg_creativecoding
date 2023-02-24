@@ -12,7 +12,7 @@
   <body>
 
 
-    <a-scene renderer="antialias:false; colorManagement: true; exposure: 0.1;" fog="type: linear; color: #f7c78d; near: 20; far: 40" light="defaultLightsEnabled: false" shadow="enabled: false; type: basic;">
+    <a-scene renderer="antialias:false; colorManagement: true; exposure: 0.1;" fog="type: linear; color: #f7c78d; near: 20; far: 40" light="defaultLightsEnabled: false" shadow="enabled: false;">
       <a-assets>
         <a-asset-item id="building" src="assets/videoworld.glb"></a-asset-item>
         <img id="tv1" src="assets/ripley.gif">
@@ -20,7 +20,7 @@
         <img id="tv3" src="assets/hausu.gif">
       </a-assets>
 
-      <a-scene stats></a-scene>
+      <!-- <a-scene stats></a-scene> -->
 
       <a-sky color="#ebb223"></a-sky>
       <a-entity light="type: ambient; color: #ffffff; intensity: 0.5;"></a-entity>
